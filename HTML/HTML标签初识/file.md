@@ -367,4 +367,52 @@
 | submit | 定义提交按钮，提交按钮会把表单数据发送到服务器 | 
 | text | 定义单行的输入字段，用户可在其中输入文本，默认宽度为20个字符 | 
 
+> 除了type属性，还有其他属性
+
+| 属性 | 属性值 | 描述 | 
+| --- | --- | --- | 
+| name | 由用户自定义 | 定义input元素的名称 |
+| value | 由用户自定义 | 规定input元素的值 | 
+| checked | checked | 规定此input元素首次加载时应当被选中 | 
+| maxlength | 正整数 | 规定输入字段中的字符最大长度 |
+
+
+- 在radio以及checkbox内，name必须要一致
+- name和value是每个表单元素都有的属性值，主要给后台人员使用
+- checked属性主要针对于单选按钮和复选框，主要作用一打开页面，就要可以默认选中某个表单元素
+
+###### label标签
+
+> label标签是input标签的标注标签
+> label标签用于绑定一个表单元素，当点击label标签内的文本时，浏览器会自动将焦点(光标)转到或者选择对应的表单元素上，用来增加用户体验
+
+```html
+<label for="sex">男</label>
+<input type="radio" name="sex" id="sex">
+```
+- 注意label中的for属性应当与相关元素的id属性相同
+
+###### select下拉表单元素
+
+> 如果有多个选项供用户选择，并且想要节约空间时，可以使用select标签
+
+```html
+<select>
+    <option>选项1</option>
+    <option>选项2</option>
+    <option>选项3</option>
+</select>
+```
+- select至少包含一对option
+- option中定义selected=时，当前项就为默认项
+
+###### textarea文本域元素
+
+> 当用户输入内容较多时，就不能选用文本框了，就需要使用textarea
+
+```html
+<textarea rows="3" cols="20">
+    文本内容
+</textarea>
+```
 
